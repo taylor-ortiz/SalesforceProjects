@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-    <types>
-      <members>Account</members>
-      <members>Custom_Message__c</members>
-      <name>CustomObject</name>
-    </types>
   <types>
-    <members>messagesProject</members>
-    <members>myLightningComponent</members>
     <name>LightningComponentBundle</name>
+    <members>messagesProject</members>
+    <members>myLightningWebComponent</members>
+    <members>utils</members>
   </types>
   <version>45.0</version>
 </Package>

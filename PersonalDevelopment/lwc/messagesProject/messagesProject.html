@@ -1,3 +1,24 @@
 <template>
-    
+    <lightning-card title="Message Board">
+        <div class="slds-p-left_small slds-p-right_small">
+            <lightning-input label="New Message" class="slds-p-bottom_small" placeholder="Please type your message here" value={message} onchange={onMessageChange}>
+            </lightning-input>
+            <lightning-button label="Submit" onclick={createMessage}>
+            </lightning-button>
+        </div>
+        <div class="slds-feed slds-p-left_small slds-p-right_small slds-p-top_small">
+            <ul class="slds-feed__list">
+                <template if:true={checkForMessages}>
+                    <template for:each={messages} for:item="msg">
+                        <div key={msg}>
+                            {msg.Message__c}
+                        </div>
+                    </template>
+                </template>
+                <template if:false={checkForMessages}>
+                    You do not have any messages to view at this time
+                </template>        
+            </ul>
+        </div>
+    </lightning-card>
 </template>
